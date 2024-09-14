@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@vincosmo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: url('https://s3.ezgif.com/tmp/ezgif-3-1d5a5dbd57.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #main-content {
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+            position: relative;
+        }
+
+        .profile-section {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            position: relative;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2rem;
+            margin: 1rem 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .social-icons {
+            margin: 1rem 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2rem;
+            margin: 0 1rem;
+            text-decoration: none;
+            position: relative;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ff4081;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 0.9rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 5px;
+        }
+
+        .social-icons a:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .flying-text-container {
+            position: relative;
+            height: 100px; /* Adjusted height */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .flying-text {
+            font-size: 1.2rem;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid #fff;
+            animation: typing 4s steps(40, end) infinite, blink-caret .75s step-end infinite;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #fff }
+        }
+
+        .contact-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-icon i {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            padding: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-icon i:hover {
+            background: #ff4081;
+        }
+
+        .footer {
+            position: absolute;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@vincosmo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background: url('https://s3.ezgif.com/tmp/ezgif-3-1d5a5dbd57.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #main-content {
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+            position: relative;
+        }
+
+        .profile-section {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            position: relative;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2rem;
+            margin: 1rem 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .social-icons {
+            margin: 1rem 0;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2rem;
+            margin: 0 1rem;
+            text-decoration: none;
+            position: relative;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ff4081;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 0.9rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 5px;
+        }
+
+        .social-icons a:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .flying-text-container {
+            position: relative;
+            height: 100px; /* Adjusted height */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .flying-text {
+            font-size: 1.2rem;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid #fff;
+            animation: typing 4s steps(40, end) infinite, blink-caret .75s step-end infinite;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #fff }
+        }
+
+        .contact-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-icon i {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            padding: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-icon i:hover {
+            background: #ff4081;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .footer a {
+            color: #ff4081;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contact Me Icon -->
+    <a href="mailto:celvcosmo@gmail.com" class="contact-icon">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img src="https://media.discordapp.net/attachments/1117465181203730452/1284503683920433255/IMG_20240308_093610_629.jpg?ex=66e6dec7&is=66e58d47&hm=067aa9ad57da55200e749caf671e1ed5cb8508f1c99b7488e8d89ff11f1e9fc9&=&format=webp&width=556&height=741" alt="Profile Picture">
+            </div>
+            <div class="name">@vincosmo</div>
+            <div class="flying-text-container">
+                <div class="flying-text">hello! i am vincosmo</div>
+            </div>
+            <div class="social-icons">
+                <a href="https://discord.com/channels/@vincosmo" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <div class="tooltip">@vincosmo</div>
+                </a>
+                <a href="https://open.spotify.com" target="_blank">
+                    <i class="fab fa-spotify"></i>
+                    <div class="tooltip">@celvcosmo</div>
+                </a>
+                <a href="https://t.me/celestialscribe" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <div class="tooltip">@celestialscribe</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 <a href="https://vincosmo.com" target="_blank" rel="noopener">vincosmo.com</a></p>
+    </div>
+
+    <!-- Include Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
+
+
